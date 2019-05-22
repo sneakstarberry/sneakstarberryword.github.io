@@ -1,0 +1,69 @@
+
+        
+    <div class='asdf'>
+        <div class='content2'>
+        <h1 id='title'>
+            <b>Word Count</b>
+        </h1>
+        <h3 id='subtitle' >
+            멋쟁이사자처럼
+        </h3>
+<!-- 페이지 설명 (about 링크) -->
+<!-- #글씨를 받을 수 있는 form태그 -->
+<!-- #숫자를 세주는 count로 갈 수 있는 링크 -->
+        <br>
+        <form action="{% url 'count' %}">
+        <textarea cols="50" rows="10" name="fulltext"></textarea>
+        <br>
+        <button type="submit" class='contents' value="">WORD COUNT!</button>
+        </form>
+        </div>
+    </div>
+<STYLE>
+        html {
+            width : 100%;
+            height : 100%;
+            margin : 0 ;
+            padding : 0;
+            background : url('https://ae01.alicdn.com/kf/HTB11_4ORFXXXXbqaXXXq6xXFXXXx/Portable-Foreign-Language-Word-Learning-Flash-Cards-with-Binder-Ring-English-Vocabulary-Word-Card-Mini-Notebook.jpg_640x640.jpg');
+            background-size: cover;
+            background-repeat:no-repeat; }
+        #title {
+            font-weight : 100;
+            font-size : 60px;
+            color : white;
+            margin-top : 200px;
+            text-align : center;
+            width : 380px;
+            margin : 150px auto 0 auto;
+            border-bottom : 5px solid #fff;
+        }
+        #subtitle {
+            font-size : 30px;
+            color : orange;
+            width : 220px;
+            border-bottom : 3px solid orange;
+            text-align: center;
+            margin : 0 auto;
+            margin-top : 20px;
+    
+        }
+    .asdf{
+        background-color: rgba(56, 31, 31, 0.5);
+        text-align : center;
+    }
+    .content2{
+        padding-bottom: 1px;
+    }
+    .contents{
+        text-align : center;
+        color : #fff;
+        font-size : 20px;
+        background-color: orange;
+        padding : 10px 40px;
+        margin : 30px auto;
+        display:block;
+        width : 100px;
+        transition : 0.3s.;
+    }
+    </STYLE>

@@ -1,0 +1,71 @@
+<div class='wrapper'>
+<h1><b>멋쟁이 사자</b><br>가 입력한 텍스트는 <br><b>{{total}}단어</b><br>로 구성</h1>
+<div class = 'content'>
+<h2>입력한 전체 텍스트</h2>
+{{fulltext}}
+</div>
+<h1><b>단어 -> 단어 나온 횟수</b></h1>
+<div class ='content2'>
+{% for word, countTotal in dictionary %}
+{{word}}->{{countTotal}}
+<br>
+{% endfor %}
+</div>
+<a href="{% url 'home' %}" class='return'>다시하기</a>
+</div>
+<style>
+    h1{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+b{
+    font-size : 50px;
+    color : orange;
+}
+.return{ 
+    text-decoration : none;
+    text-align : center;
+    color : #fff;
+    font-size : 1.5em;
+    background-color: orange;
+    padding : 10px 40px;
+    margin : 70px auto;
+    display:block;
+    width : 100px;
+    transition : 0.3s;
+    
+}
+.return:hover{
+    color : orange;
+    background-color : white;
+    width : 105px;
+    transition : 0.3s;
+}
+div{
+    margin: 0 auto;
+    width: 65%;
+    text-align: center;
+    background-color: black;
+    background-color: rgba(49, 44, 44, 0.8);
+    color: white;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+.wrapper{
+width:70%;
+height :98%;
+overflow-y:auto;
+}
+.content{
+    width: 80%;
+}
+.content2{
+    width: 20%;
+}
+html {
+    background : url('https://cdn.crowdpic.net/detail-thumb/thumb_d_4C645DDD3A6FA8568C6014539615A9E8.jpg');
+    background-repeat:repeat;
+    overflow-y: hidden;
+}
+</style>
